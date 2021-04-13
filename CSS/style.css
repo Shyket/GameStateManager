@@ -26,7 +26,7 @@ main {
 main section.glass {
   min-height: 83.5vh;
   max-height: 83.5vh;
-  width: 60%;
+  width: 70%;
   margin: auto;
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.3)));
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
@@ -71,12 +71,21 @@ main section.glass section.left-pane .profile img {
   height: 4em;
 }
 
+main section.glass section.left-pane .profile img:hover {
+  cursor: pointer;
+}
+
 main section.glass section.left-pane .profile p.username {
   margin-top: 0.3em;
   color: #6384aa;
-  font-weight: bold;
-  font-size: small;
+  font-weight: 600;
+  font-size: 1em;
   margin-bottom: 0.2em;
+}
+
+main section.glass section.left-pane .profile p.username:hover {
+  color: #7fa4d1;
+  cursor: pointer;
 }
 
 main section.glass section.left-pane .profile p.membership {
@@ -107,6 +116,13 @@ main section.glass section.left-pane nav ul li {
   color: #7da4cf;
 }
 
+main section.glass section.left-pane nav ul li:hover {
+  color: #6384aa;
+  font-weight: bolder;
+  padding-left: 0.5em;
+  cursor: pointer;
+}
+
 main section.glass section.left-pane nav ul li img {
   height: 1.6em;
   width: 1.6em;
@@ -119,7 +135,7 @@ main section.glass section.left-pane nav ul li p {
 
 main section.glass section.left-pane .pro-gaming {
   width: 80%;
-  margin-top: 4em;
+  margin-top: 3em;
   background: -webkit-gradient(linear, left bottom, right top, from(#65dfc9), to(#6cdbeb));
   background: linear-gradient(to right top, #65dfc9, #6cdbeb);
   border-radius: 1.3em;
@@ -129,6 +145,12 @@ main section.glass section.left-pane .pro-gaming {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+main section.glass section.left-pane .pro-gaming:hover {
+  width: 85%;
+  cursor: pointer;
+  height: 7em;
 }
 
 main section.glass section.left-pane .pro-gaming p {
@@ -146,7 +168,6 @@ main section.glass section.left-pane .pro-gaming img {
 
 main section.glass section.right-pane {
   width: 69.5%;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,29 +176,32 @@ main section.glass section.right-pane {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-left: 3em;
+  margin-bottom: 1em;
 }
 
-main section.glass section.right-pane h1 {
+main section.glass section.right-pane .heading h1 {
   color: #6384aa;
   text-align: left;
   margin-top: 2em;
   font-size: xx-large;
 }
 
-main section.glass section.right-pane .underline {
+main section.glass section.right-pane .heading .underline {
   height: 1.2em;
   width: 45%;
   border-radius: 5em;
+  margin-bottom: 2em;
   background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.3)));
   background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
 }
 
-main section.glass section.right-pane ul {
+main section.glass section.right-pane .game-list ul {
   list-style-type: none;
-  margin-top: 2em;
+  overflow-y: scroll;
+  height: 25em;
 }
 
-main section.glass section.right-pane ul li {
+main section.glass section.right-pane .game-list ul li {
   background: -webkit-gradient(linear, right bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.5)));
   background: linear-gradient(to left top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
   border-radius: 0.5em;
@@ -188,49 +212,81 @@ main section.glass section.right-pane ul li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 1.5em 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-shadow: inset;
           box-shadow: inset;
   padding: 1em 1em;
+  margin: 1.5em 0;
 }
 
-main section.glass section.right-pane ul li img {
+main section.glass section.right-pane .game-list ul li:hover {
+  cursor: pointer;
+}
+
+main section.glass section.right-pane .game-list ul li:hover img {
+  width: 4.5em;
+  height: 4.5em;
+}
+
+main section.glass section.right-pane .game-list ul li:hover p.game-name {
+  color: #6384aa;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+main section.glass section.right-pane .game-list ul li:hover .game-complete-bar {
+  height: 1em;
+}
+
+main section.glass section.right-pane .game-list ul li:hover .game-complete-percentage {
+  font-size: 1.2em;
+}
+
+main section.glass section.right-pane .game-list ul li img {
   width: 4em;
   height: 4em;
+  margin-right: 1em;
 }
 
-main section.glass section.right-pane ul li p.game-name {
+main section.glass section.right-pane .game-list ul li p.game-name {
   color: #7da4cf;
   font-weight: 500;
 }
 
-main section.glass section.right-pane ul li p.game-platform {
+main section.glass section.right-pane .game-list ul li p.game-platform {
   margin-top: 0.5em;
   color: #7da4cf;
   font-size: 0.7em;
   font-weight: 400;
 }
 
-main section.glass section.right-pane ul li .game-complete-bar {
+main section.glass section.right-pane .game-list ul li .game-complete-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 1em;
+  margin-top: 0.5em;
   background: white;
   border-radius: 1em;
 }
 
-main section.glass section.right-pane ul li .game-complete-bar .complete-part {
+main section.glass section.right-pane .game-list ul li .game-complete-bar .complete-part {
   width: 60%;
   border-radius: 1em;
   background: -webkit-gradient(linear, left bottom, right top, from(#65dfc9), to(#6cdbeb));
   background: linear-gradient(to right top, #65dfc9, #6cdbeb);
 }
 
-main section.glass section.right-pane ul li p.game-complete-percentage {
+main section.glass section.right-pane .game-list ul li .game-complete-percentage {
   color: #65dfc9;
   font-weight: 600;
+  margin-bottom: auto;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 1em;
 }
 
 .circle1,
@@ -246,11 +302,41 @@ main section.glass section.right-pane ul li p.game-complete-percentage {
 
 .circle1 {
   top: 5%;
-  right: 15%;
+  right: 10%;
 }
 
 .circle2 {
   bottom: 5%;
-  left: 10%;
+  left: 6%;
+}
+
+@media only screen and (max-width: 1015px) {
+  main section.glass {
+    width: 80%;
+  }
+  .circle1 {
+    top: 2%;
+    right: 3%;
+  }
+  .circle2 {
+    bottom: 2%;
+    left: 3%;
+  }
+}
+
+@media only screen and (max-width: 846px) {
+  main section.glass {
+    width: 90%;
+  }
+  .circle1,
+  .circle2 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  main section.glass {
+    width: 95%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

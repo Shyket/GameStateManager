@@ -17,7 +17,7 @@ main {
   section.glass {
     min-height: 83.5vh;
     max-height: 83.5vh;
-    width: 60%;
+    width: 70%;
     margin: auto;
     background: linear-gradient(
       to right bottom,
@@ -49,13 +49,22 @@ main {
         img {
           width: 4em;
           height: 4em;
+
+          &:hover {
+            cursor: pointer;
+          }
         }
         p.username {
           margin-top: 0.3em;
           color: #6384aa;
-          font-weight: bold;
-          font-size: small;
+          font-weight: 600;
+          font-size: 1em;
           margin-bottom: 0.2em;
+
+          &:hover {
+            color: #7fa4d1;
+            cursor: pointer;
+          }
         }
 
         p.membership {
@@ -78,6 +87,13 @@ main {
             font-weight: 500;
             color: #7da4cf;
 
+            &:hover {
+              color: #6384aa;
+              font-weight: bolder;
+              padding-left: 0.5em;
+              cursor: pointer;
+            }
+
             img {
               height: 1.6em;
               width: 1.6em;
@@ -92,11 +108,17 @@ main {
 
       .pro-gaming {
         width: 80%;
-        margin-top: 4em;
+        margin-top: 3em;
         background: linear-gradient(to right top, #65dfc9, #6cdbeb);
         border-radius: 1.3em;
         display: flex;
         align-items: center;
+
+        &:hover {
+          width: 85%;
+          cursor: pointer;
+          height: 7em;
+        }
 
         p {
           margin-left: 0.3em;
@@ -115,11 +137,12 @@ main {
 
     section.right-pane {
       width: 69.5%;
-      height: 100%;
       display: flex;
       flex-direction: column;
       padding-left: 3em;
-      h1 {
+      margin-bottom: 1em;
+      .heading{
+        h1 {
         color: #6384aa;
         text-align: left;
         margin-top: 2em;
@@ -129,16 +152,22 @@ main {
         height: 1.2em;
         width: 45%;
         border-radius: 5em;
+        margin-bottom: 2em;
         background: linear-gradient(
           to right,
           rgba(255, 255, 255, 0.7),
           rgba(255, 255, 255, 0.3)
         );
       }
+      }
+
+
+      .game-list{
+        
       ul {
         list-style-type: none;
-        margin-top: 2em;
-
+        overflow-y: scroll;
+        height: 25em;
         li {
           background: linear-gradient(
             to left top,
@@ -149,13 +178,37 @@ main {
           width: 90%;
           display: flex;
           justify-content: space-between;
-          margin: 1.5em 0;
+          align-items: center;
           box-shadow: inset;
           padding: 1em 1em;
+          margin: 1.5em 0;
+
+          &:hover {
+            cursor: pointer;
+
+            img {
+              width: 4.5em;
+              height: 4.5em;
+            }
+
+            p.game-name {
+              color: #6384aa;
+              font-size: 1.2em;
+              cursor: pointer;
+            }
+
+            .game-complete-bar {
+              height: 1em;
+            }
+            .game-complete-percentage {
+              font-size: 1.2em;
+            }
+          }
 
           img {
             width: 4em;
             height: 4em;
+            margin-right: 1em;
           }
 
           p.game-name {
@@ -174,6 +227,7 @@ main {
             display: flex;
             width: 100%;
             height: 1em;
+            margin-top: 0.5em;
             background: white;
             border-radius: 1em;
 
@@ -184,13 +238,17 @@ main {
             }
           }
 
-          p.game-complete-percentage {
+          .game-complete-percentage {
             color: #65dfc9;
-            font-weight:600;
+            font-weight: 600;
+            margin-bottom: auto;
+            align-self: flex-start;
+            margin-left: 1em;
           }
         }
       }
     }
+  }
   }
 }
 
@@ -210,10 +268,61 @@ main {
 
 .circle1 {
   top: 5%;
-  right: 15%;
+  right: 10%;
 }
 
 .circle2 {
   bottom: 5%;
-  left: 10%;
+  left: 6%;
+}
+
+
+
+  // .circle1 {
+  //   top: 2%;
+  //   right: 8%;
+  // }
+
+  // .circle2 {
+  //   bottom: 2%;
+  //   left: 8%;
+  // }
+
+
+@media only screen and (max-width: 1015px) {
+  main {
+    section.glass {
+      width: 80%;
+    }
+  }
+  .circle1 {
+    top: 2%;
+    right: 3%;
+  }
+
+  .circle2 {
+    bottom: 2%;
+    left: 3%;
+  }
+}
+
+@media only screen and (max-width: 846px) {
+  main {
+    section.glass {
+      width: 90%;
+    }
+  }
+  .circle1,
+  .circle2 {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 750px) {
+  main {
+    section.glass {
+      width: 95%;
+    }
+  }
 }
